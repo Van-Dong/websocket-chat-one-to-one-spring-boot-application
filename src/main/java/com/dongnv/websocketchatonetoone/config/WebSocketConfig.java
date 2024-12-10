@@ -20,7 +20,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         registry.enableSimpleBroker("/user");  // Gửi tin nhắn đến các subscriber đã đăng ký
         registry.setApplicationDestinationPrefixes("/app");  // tin nhắn từ client đến server, được xử lý trong controller ứng dụng
-        registry.setUserDestinationPrefix("/user");  // gửi tin nhắn đến người dùng cụ thể từ server
+        registry.setUserDestinationPrefix("/user");  // gửi tin nhắn đến người dùng cụ thể từ server (có phương thức gửi nó sẽ dạng /users/{userId}/...)
     }
 
     @Override

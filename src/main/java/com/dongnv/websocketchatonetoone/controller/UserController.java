@@ -21,14 +21,14 @@ public class UserController {
     UserService userService;
 
     @MessageMapping("/user.addUser")
-    @SendTo("/user/topic")
+    @SendTo("/public")  // Không được viết /user/public ở đây, vì ta đã chỉ định /user là 1 user-specific destination rồi
     public User addUser(@Payload User user) {
         userService.saveUser(user);
         return user;
     }
 
     @MessageMapping("/user.disconnectUser")
-    @SendTo("/user/topic")
+    @SendTo("/public")
     public User disconnect(@Payload User user) {
         userService.disconnect(user);
         return user;

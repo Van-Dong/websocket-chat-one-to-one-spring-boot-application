@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class User {
     @Id
-    String nickName;
+    String nickname;
     String fullName;
     Status status;
 }

@@ -37,7 +37,7 @@ public class ChatRoomService {
                 .build();
 
         ChatRoom recipientSender = ChatRoom.builder()
-                .chatId(String.format("%s_%s", recipientId, senderId))
+                .chatId(chatId)
                 .senderId(recipientId)
                 .recipientId(senderId)
                 .build();

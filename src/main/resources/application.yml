@@ -1,11 +1,11 @@
 spring:
   data:
     mongodb:
-      username: dongnv
-      password: dongnv
-      host: localhost
-      port: 27017
-      database: chat_app
+      username: ${MONGODB_USERNAME:dongnv}
+      password: ${MONGODB_PASSWORD:dongnv}
+      host: ${MONGODB_HOST:localhost}
+      port: ${MONGODB_PORT:27017}
+      database: ${MONGODB_DB:chat_app}
       authentication-database: admin
-  server:
-    port: 8080
+server:
+  port: 8080
